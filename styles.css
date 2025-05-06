@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+}
+
+.keyboard-row button {
+    transition: all 0.2s ease;
+}
+
+.keyboard-row button:hover {
+    transform: translateY(-2px);
+}
+
+.tile {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #d1d5db;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    transition: all 0.2s;
+}
+
+.tile-filled {
+    border: 2px solid #6b7280;
+    animation: pop 0.1s;
+}
+
+.tile-correct {
+    background-color: #4ade80;
+    border-color: #4ade80;
+    color: white;
+}
+
+.tile-present {
+    background-color: #facc15;
+    border-color: #facc15;
+    color: white;
+}
+
+.tile-absent {
+    background-color: #9ca3af;
+    border-color: #9ca3af;
+    color: white;
+}
+
+.key {
+    min-width: 40px;
+    height: 58px;
+    margin: 3px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.key-correct {
+    background-color: #4ade80;
+    color: white;
+}
+
+.key-present {
+    background-color: #facc15;
+    color: white;
+}
+
+.key-absent {
+    background-color: #9ca3af;
+    color: white;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+.flip {
+    animation: flip 0.5s ease forwards;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+
+    45% {
+        transform: rotateX(90deg);
+    }
+
+    55% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+.bounce {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+
+    0%,
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    80% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
