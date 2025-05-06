@@ -6,6 +6,20 @@ body {
     width: 100%; 
 }
 
+.lim {
+    max-width: 480px; 
+    max-height: 620px; 
+}
+
+@media (max-width: 400px) {
+    .lim {
+        width: 75%;
+    }
+    .keyboard {
+        width: 80%;
+    }
+}
+
 .keyboard-row button {
     transition: all 0.2s ease;
 }
@@ -50,12 +64,6 @@ body {
     color: white;
 }
 
-.keyboard {
-    display: flex;
-    justify-content: center; 
-    
-}
-
 .key {
     min-width: 40px;
     height: 58px;
@@ -68,19 +76,6 @@ body {
     font-weight: bold;
     cursor: pointer;
     user-select: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .keyboard {
-        max-width: 100%; /* Limit max width for smaller screens */
-    }
-}
-
-@media (max-width: 400px) {
-    .keyboard {
-        max-width: 75%; /* Further limit max width for very small screens */
-    }
 }
 
 .key-correct {
