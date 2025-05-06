@@ -3,6 +3,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8fafc;
+    width: 100%; 
 }
 
 .keyboard-row button {
@@ -47,6 +48,11 @@ body {
     background-color: #9ca3af;
     border-color: #9ca3af;
     color: white;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center; 
 }
 
 .key {
