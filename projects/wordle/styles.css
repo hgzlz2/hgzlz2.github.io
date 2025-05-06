@@ -53,6 +53,7 @@ body {
 .keyboard {
     display: flex;
     justify-content: center; 
+    
 }
 
 .key {
@@ -67,6 +68,19 @@ body {
     font-weight: bold;
     cursor: pointer;
     user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .keyboard {
+        max-width: 100%; /* Limit max width for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .keyboard {
+        max-width: 75%; /* Further limit max width for very small screens */
+    }
 }
 
 .key-correct {
